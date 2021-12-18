@@ -39,7 +39,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MORPH],
                 )
 
 server = app.server
-app.title='Sustain-Our-Soil-for-Our-Food'
+app.title = 'Sustain-Our-Soil-for-Our-Food'
 
 # ----------------------------------------------------------------------------------------
 # named variables for the app's layout
