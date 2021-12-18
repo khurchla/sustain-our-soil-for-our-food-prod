@@ -1,1 +1,2 @@
 data/dfsoil_subUSCN.csv filter=lfs diff=lfs merge=lfs -text
+dfsoil_subUSCN_prod.csv filter=lfs diff=lfs merge=lfs -text
