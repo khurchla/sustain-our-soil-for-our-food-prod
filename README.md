@@ -3,6 +3,26 @@
 Capstone project for graduate MPS in Data Analytics &amp; Visualization degree, Maryland Institute College of Art.
 December 2021
 
+Contained in this file collection:
+- __app.py__  (script that runs the app)
+- __requirements.txt*__  (specs file lists the Python packages and versions required)
+- __README.md__  (this Markdown file containing instructions to run the file with Python)
+- __dffood.csv__  (data source)
+- __dfsoil_subUSCN.csv__ (data source)
+- LICENSE  (open source license to accompany the code)
+
+
+* To run the app from the script app.py file, it is necessary to first install these packages listed in plain text format in requirements.txt:
+
+1 - It is recommended to make, and then activate a virtual environment, so these can be more easily removed if you want when you are finished. This also avoids conflict with other versions of these programs that you may have on your computer.
+
+2 - Put requirements.txt in the directory where the command will be executed. If it is in another directory, specify its path like path/to/requirements.txt.
+
+3 - On a Mac, in the Terminal and run: pip install requirements.txt 
+4 - On a PC, in your shell and run:    pip install -r requirements.txt  
+
+---
+
 ## Summary for Food Consumers
 **With 7.9 Billion humans on Earth as of November 2021, and an expected 10 Billion in the year 2057 (United Nations/Worldomter), as consumers we individually and collectively hold great potential to maintain and restore the grand resource of our soil,** through purchasing power to support food producers and advocacy to policy makers. This project investigates the intersection of organic carbon storage in soil with climate change and food production sustainability. Its success measure is introducing people who buy and eat food to an appreciation of the importance of soil organic carbon content where foods they eat are produced, even if that land is far away.
 

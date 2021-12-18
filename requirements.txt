@@ -10,6 +10,7 @@ dataclasses @ file:///home/conda/feedstock_root/build_artifacts/dataclasses_1628
 Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1633384704162/work
 Flask-Compress @ file:///home/conda/feedstock_root/build_artifacts/flask-compress_1623842138238/work
 humanize @ file:///home/conda/feedstock_root/build_artifacts/humanize_1638245298270/work
+gunicorn-20.1.0
 itsdangerous @ file:///home/conda/feedstock_root/build_artifacts/itsdangerous_1621360792037/work
 Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1636510082894/work
 MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1635833833566/work
