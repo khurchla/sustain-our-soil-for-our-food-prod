@@ -10,6 +10,7 @@ dependencies:
   - dataclasses=0.8=pyhc8e2a94_3
   - flask=2.0.2=pyhd8ed1ab_0
   - flask-compress=1.10.1=pyhd8ed1ab_0
+  - gunicorn
   - humanize=3.13.1=pyhd8ed1ab_0
   - itsdangerous=2.0.1=pyhd8ed1ab_0
   - jinja2=3.0.3=pyhd8ed1ab_0
