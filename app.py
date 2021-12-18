@@ -38,7 +38,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MORPH],
                             'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5'}]
                 )
 
-server=app.server
+server = app.server
 app.title='Sustain-Our-Soil-for-Our-Food'
 
 # ----------------------------------------------------------------------------------------
