@@ -10,13 +10,12 @@ import plotly.express as px
 import pandas as pd
 import humanize
 import os
-from boto.s3.connection import S3Connection
 
 # read token string with your access mapbox token from a hidden file
 # saved in environment's root directory same as where this app.py file is
 # if you're using GitHub make sure to add '*.mapbox_token' to your .gitignore file
 # to prevent your private credentials from being publicly viewed or uploaded to GitHub
-mapbox_access_token = S3Connection(os.environ['MAPBOX_ACCESS_TOKEN'])
+mapbox_access_token = os.environ.get('MAPBOX_ACCESS_TOKEN')
 
 # ----------------------------------------------------------------------------------------
 # -- call the data
@@ -29,7 +28,7 @@ dffood = pd.read_csv('./data/dffood.csv')
 # -- read the 4.5 depth soil organic carbon density (%) measurements pre-filtered for audience China's and U.S.'s food's trade export Reporter Countries (exported from analysis in Jupyter Notebook)
 # prepared using original dataset Soil organic carbon density: SOCD5min.zip from http://globalchange.bnu.edu.cn/research/soilw
 # with appended country name and ISO3 code from GeoPandas embedded World dataset
-dfsoil = pd.read_csv('./data/dfsoil_subUSCN.csv')
+dfsoil = pd.read_csv('./data/dfsoil_subUSCN_prod.csv')
 
 # ----------------------------------------------------------------------------------------
 # create (instantiate) the app,
