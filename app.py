@@ -9,12 +9,14 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import humanize
+import os
+from boto.s3.connection import S3Connection
 
 # read token string with your access mapbox token from a hidden file
 # saved in environment's root directory same as where this app.py file is
 # if you're using GitHub make sure to add '*.mapbox_token' to your .gitignore file
 # to prevent your private credentials from being publicly viewed or uploaded to GitHub
-mapbox_access_token = open(".mapbox_token").read()
+mapbox_access_token = S3Connection(os.environ['MAPBOX_ACCESS_TOKEN'])
 
 # ----------------------------------------------------------------------------------------
 # -- call the data
