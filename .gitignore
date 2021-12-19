@@ -1,4 +1,6 @@
 .mapbox_token
-.DS_Store
-*.idea
+venv
 *.pyc
+.DS_Store
+.env
+*.idea
