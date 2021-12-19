@@ -1,1 +1,1 @@
-web: gunicorn app:server
+web: gunicorn app:server --preload --max-requests 1200 --max-requests-jitter 60
