@@ -70,7 +70,7 @@ navbar = dbc.NavbarSimple(
             label="Share",
         ),
     ],
-    brand='Sustain our Soil for our Food',
+    brand='Sustain Our Soil for Our Food',
     color='#483628',  # "dark", #hex code color matching text in graphs, a dark orange brown; "dark" is MORPH theme option and a dark charcoal
     dark=True,
     class_name="fixed-top",
