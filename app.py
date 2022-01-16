@@ -314,7 +314,10 @@ RiskFoodsFig = px.scatter(dffood, x='Export_Items_Count', y='Export_Quantity_Sum
 RiskFoodsFig.update_layout(
                            xaxis_title='Diversity of Foods Imported (How many unique items?)',  # Exported (How many unique items?)',
                            # move yaxis text to title area for readability; add empty line above it so it appears below the plotly toolbar options
-                           title='<br>Volume as Total Quantity of Foods Imported (tonnes)',
+                           title={
+                               'text': 'Volume as Total Quantity of Foods Imported (tonnes)',
+                               'xref': 'container',
+                           },
                            yaxis_title='',  # moved to title attribute for readability
                            paper_bgcolor='#e8ece8',  # next tint variation up from a low tint of #dadeda
                            plot_bgcolor='#f7f5fc',  # violet tone of medium purple to help greens pop forward
@@ -460,6 +463,7 @@ def update_selected_reporter_country(selected_reporter_country):
     dfsoil_sub1 = dfsoil_sub[(dfsoil_sub['Reporter_Country_name'] == selected_reporter_country)]
 
     # create figure variables for the graph object
+
     locations = [go.Scattermapbox(
         name='SOCD at Surface Depth to 4.5cm',
         lon=dfsoil_sub1['Reporter_Country_lon'],
@@ -467,8 +471,16 @@ def update_selected_reporter_country(selected_reporter_country):
         mode='markers',
         marker=go.scattermapbox.Marker(
                                        size=dfsoil_sub['Reporter_Country_SOCD_depth4_5'],
-                                       color='fuchsia',  # bright hue for contrast
-                                       opacity=0.7
+                                       # add a sequential color scale based on shades of fuschia #ff00ff
+                                       # bright hues range for contrast to map background layer
+                                       # to more easily differentiate each separate point on map
+                                       color=dfsoil_sub['Reporter_Country_SOCD_depth4_5'],
+                                       colorscale='Agsunset_r',
+                                       # show a colorbar for this colorscale range
+                                       showscale=True,
+                                       colorbar=dict(title="SOCD"
+                                                     ),
+                                       opacity=0.8,  # float or integer range between 0 and 1
                                        ),
         hovertemplate="Longitude: %{lon}<br>" + "Latitude: %{lat}<br><extra></extra>"  # hide secondary tag with empty extra tag
         )
@@ -476,7 +488,11 @@ def update_selected_reporter_country(selected_reporter_country):
 
     # add a mapbox image layer below the data
     layout = go.Layout(
-                uirevision='foo',  # preserves state of figure/map after callback activated
+                # commented out uirevision to allow map to reset zoom level to default when selection is changed
+                # uirevision='foo',  # to preserve state of figure/map after callback activated
+                # match background behind color legend to the page area graph sit on
+                paper_bgcolor='#e4ebf5',  # Morph theme card background color,
+                font=dict(color='#483628'),  # a dark shade of orange that appears dark brown
                 clickmode='event+select',
                 hovermode='closest',
                 hoverdistance=2,
@@ -485,7 +501,7 @@ def update_selected_reporter_country(selected_reporter_country):
                     style='white-bg'
                 ),
                 autosize=True,
-                margin=dict(l=0, r=0, t=0, b=0),
+                margin=dict(l=0, r=0, t=35, b=0),
                 mapbox_layers=[
                     {
                         'below': 'traces',
@@ -504,7 +520,7 @@ def update_selected_reporter_country(selected_reporter_country):
                          'layout': layout
                      })
 
-# connect the Learn More button and modal with user interactions
+# connect theLearn More button and modal with user interactions
 
 
 @app.callback(
