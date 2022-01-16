@@ -200,7 +200,11 @@ mapExplorer = dbc.Card([
                className="lead"
                ),
         html.Div(controls),
-        html.Div(id='map-socd',
+        # # map format without spinner for reference
+        # html.Div(id='map-socd',
+        #          ),
+        # add a loading spinner to the map
+        dbc.Spinner(id='map-socd', size="lg", color="primary", type="border", fullscreen=False
                  ),
     ]),
     html.Br(),
