@@ -2,7 +2,7 @@
 
 _How much of the soil where your food comes from is made up of organic carbon?_
 
-Explore the web app at http://sustain-our-soil.kathrynhurchla.com/
+Explore the web app at https://sustain-our-soil.kathrynhurchla.com/
 
 The raw heroku domain for the app is https://sustain-our-soil-production.herokuapp.com/ where it can also be accessed.
 
