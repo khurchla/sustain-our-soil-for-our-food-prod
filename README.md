@@ -2,11 +2,9 @@
 
 _How much of the soil where your food comes from is made up of organic carbon?_
 
-Explore the web app at http://sustain-our-soil.kathrynhurchla.com/
+This web app has been retired for lack of funding. You can read more about this and other work featured at https://dadeda.design/work.
 
-The raw heroku domain for the app is https://sustain-our-soil-production.herokuapp.com/ where it can also be accessed.
-
-Have patience as I tune the app especially for memory leaks, and scale its deployment on Heroku–I'm on a budget for dynos! If you experience downtime or errors accessing the app, please let me know by opening an <a href="https://github.com/khurchla/sustain-our-soil-for-our-food/issues">issue on the project's GitHub repository</a> Cheers, Kathryn
+Cheers, Kathryn
 
 Capstone project web application prototype for graduate MPS in Data Analytics &amp; Visualization degree, Maryland Institute College of Art.
 December 2021
@@ -28,8 +26,8 @@ The primary data source of this project is Soil organic carbon density: SOCD5min
 
 FAO.STAT Trade: Detailed Trade Matrix: License: CC BY-NC-SA 3.0 IGO. Extracted from: https://www.fao.org/faostat/en/#data/TM All Data Normalized. Data of Access: 10-11-2021.
 
+- App was deployed with Heroku and publicly available until 2023 at https://sustain-our-soil.kathrynhurchla.com/
 - Roadmap at https://trello.com/b/26tohdzU/sustaining-our-soil-for-our-food-product-roadmap
-- Research Brief document and Presentation will be published in December 2021
 
 ### Acknowledgments
 Though being developed during a highly isolated and independent time socially, and entirely remote educational experience, learning to build this app wouldn't be possible without a circle of folks and resources I lean into for which I'm grateful. You've all inspired new directions and given legs to my work. 
